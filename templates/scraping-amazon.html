@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scraping Projects - CodroidHub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:'Inter',sans-serif;
+      background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+      color:#fff;min-height:100vh;display:flex;flex-direction:column;
+    }
+
+    header{display:flex;justify-content:space-between;align-items:center;padding:18px 40px;background:rgba(0,0,0,0.35);position:fixed;width:100%;top:0;z-index:10;backdrop-filter:blur(6px)}
+    .logo{font-size:24px;font-weight:800;color:#7ef1ff;letter-spacing:1px}
+    nav a{color:#d9d9d9;text-decoration:none;margin-left:20px;font-weight:500}
+    nav a:hover{color:#7ef1ff}
+
+    main{padding:120px 20px 60px;text-align:center;flex:1}
+    h1{font-size:40px;margin-bottom:26px;background:linear-gradient(90deg,#7ef1ff,#c87bff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+
+    .cards-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:26px;
+      max-width:1200px;
+      margin:0 auto;
+    }
+
+    .card-wrap{
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      gap:12px;
+    }
+
+    .card{
+      aspect-ratio:1/1; /* square box */
+      background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.02));
+      border-radius:14px;
+      position:relative;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,0.08);
+      box-shadow:0 10px 30px rgba(2,6,23,0.6);
+      transition:transform .35s ease,box-shadow .35s ease;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      padding:20px;
+      text-align:center;
+    }
+    .card::before{
+      content:'';position:absolute;inset:0;padding:1px;border-radius:14px;pointer-events:none;
+      background:linear-gradient(90deg,transparent 0%, rgba(126,241,255,0.08) 30%, rgba(200,123,255,0.06) 70%, transparent 100%);
+    }
+    .card:hover{
+      transform:scale(1.05) rotateX(5deg) rotateY(-5deg);
+      box-shadow:0 25px 60px rgba(126,241,255,0.4),0 10px 25px rgba(200,123,255,0.3);
+    }
+
+    .card-top{
+      font-weight:800;
+      font-size:20px;
+      margin-bottom:12px;
+      text-transform:uppercase;
+      color:#fff;
+      text-shadow:0 2px 6px rgba(0,0,0,0.35);
+    }
+
+    .card-desc{
+      color:#d1d1d1;
+      font-size:14px;
+      line-height:1.4;
+    }
+
+    .card-divider{
+      width:80%;
+      height:1px;
+      background:linear-gradient(90deg,transparent,#ffffff20,transparent);
+      margin:12px 0;
+    }
+
+    .card-cta{display:flex;justify-content:center}
+    .btn{
+      text-decoration:none;
+      padding:10px 22px;
+      border-radius:10px;
+      font-weight:700;
+      background:linear-gradient(90deg,#7ef1ff,#c87bff);
+      color:#002;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      border:none;
+      cursor:pointer;
+      transition:transform .18s ease,box-shadow .18s ease
+    }
+    .btn .dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.9);box-shadow:0 2px 6px rgba(0,0,0,0.25)}
+
+    .btn.zooming{transform:scale(1.15);box-shadow:0 0 25px rgba(126,241,255,0.7)}
+
+    @media (max-width:1000px){.cards-grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:650px){.cards-grid{grid-template-columns:1fr}}
+
+    footer{padding:16px;text-align:center;background:rgba(0,0,0,0.38)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Deepika Gondia</div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/aboutUs">About Me</a>
+      <a href="/aboutCodroid" target="_blank">About CodroidHub</a>
+      <a href="https://github.com/deepika123-gif" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/deepika-gondia-76120b276/" target="_blank">LinkedIn</a>
+      <a href="/blogs">Blogs</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Scraping Projects</h1>
+
+    <div class="cards-grid">
+      <div class="card-wrap">
+        <article class="card">
+          <div class="card-top">Amazon-watch</div>
+          <div class="card-desc">Flipkart is one of India’s largest e-commerce platforms, offering a wide range of products.</div>
+          <div class="card-divider"></div>
+          <div class="card-cta"><a class="btn" href="/amazon_watch"><span class="dot"></span> Explore Project</a></div>
+        </article>
+      </div>
+
+
+      <div class="card-wrap">
+        <article class="card">
+          <div class="card-top">Amazon-bags</div>
+          <div class="card-desc">Free database by U.S. National Library of Medicine for biomedical research.</div>
+          <div class="card-divider"></div>
+          <div class="card-cta"><a class="btn" href="/scraping"><span class="dot"></span> Explore Project</a></div>
+        </article>
+      </div>
+
+      <div class="card-wrap">
+        <article class="card">
+          <div class="card-top">Amazon-books</div>
+          <div class="card-desc">IMDb Top 250 is a curated list of highest-rated films ranked by users.</div>
+          <div class="card-divider"></div>
+          <div class="card-cta"><a class="btn" href="/scraping"><span class="dot"></span> Explore Project</a></div>
+        </article>
+      </div>
+
+      <div class="card-wrap">
+        <article class="card">
+          <div class="card-top">Amazon-laptop</div>
+          <div class="card-desc">Pipettes, automation systems, consumables, and lab solutions for research.</div>
+          <div class="card-divider"></div>
+          <div class="card-cta"><a class="btn" href="/gilson"><span class="dot"></span> Explore Project</a></div>
+        </article>
+      </div>
+
+
+      <div class="card-wrap">
+        <article class="card">
+          <div class="card-top">Amazon-shoestas</div>
+          <div class="card-desc">Comprehensive mutual fund info: performance, ratings, holdings, and trends.</div>
+          <div class="card-divider"></div>
+          <div class="card-cta"><a class="btn" href="/AIML"><span class="dot"></span> Explore Project</a></div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer>Deepika </footer>
+
+  <script>
+    // Button zoom + redirect
+    document.querySelectorAll(".btn").forEach(btn=>{
+      btn.addEventListener("click",function(e){
+        e.preventDefault();
+        const link=this.getAttribute("href");
+        this.classList.add("zooming");
+        setTimeout(()=>{ window.location.href=link; },250);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apna </title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:'Inter',sans-serif;
+      background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+      color:#fff;min-height:100vh;display:flex;flex-direction:column;
+    }
+
+    header{display:flex;justify-content:space-between;align-items:center;padding:18px 40px;background:rgba(0,0,0,0.35);position:fixed;width:100%;top:0;z-index:10;backdrop-filter:blur(6px)}
+    .logo{font-size:24px;font-weight:800;color:#7ef1ff;letter-spacing:1px}
+    nav a{color:#d9d9d9;text-decoration:none;margin-left:20px;font-weight:500}
+    nav a:hover{color:#7ef1ff}
+
+    main{padding:120px 20px 60px;text-align:center;flex:1}
+    h1{font-size:40px;margin-bottom:26px;background:linear-gradient(90deg,#7ef1ff,#c87bff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+
+    /* Table container styles adapted to match scraping theme */
+    .table-wrapper{max-width:1100px;margin:0 auto;text-align:left}
+    .table-card{
+      background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.02));
+      border-radius:14px;
+      padding:20px;
+      border:1px solid rgba(255,255,255,0.06);
+      box-shadow:0 10px 30px rgba(2,6,23,0.6);
+      overflow:auto;
+    }
+
+    /* preserve table look but tuned to theme */
+    table.styled-table {
+      border-collapse: collapse;
+      width: 100%;
+      border-radius: 8px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.02);
+      color: #e6eef6;
+    }
+    table.styled-table th, table.styled-table td {
+      border: 1px solid rgba(255,255,255,0.04);
+      padding: 12px 14px;
+      text-align: left;
+      font-size: 0.95rem;
+    }
+    table.styled-table th{
+      background: rgba(126,241,255,0.08);
+      color: #dff9ff;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:1px;
+    }
+    table.styled-table tr:nth-child(even){background:rgba(255,255,255,0.01)}
+    table.styled-table tr:hover{background:rgba(126,241,255,0.04);transition:0.2s}
+
+    /* Buttons similar to scraping style */
+    .btn{
+      text-decoration:none;
+      padding:10px 18px;
+      border-radius:10px;
+      font-weight:700;
+      background:linear-gradient(90deg,#7ef1ff,#c87bff);
+      color:#002;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      border:none;
+      cursor:pointer;
+      transition:transform .18s ease,box-shadow .18s ease
+    }
+
+    .header-actions{display:flex;gap:10px;align-items:center}
+
+    footer{padding:16px;text-align:center;background:rgba(0,0,0,0.38)}
+
+    @media (max-width:900px){
+      .table-wrapper{padding:0 12px}
+      header{padding:14px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Deepika Gondia</div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/aboutUs">About Me</a>
+      <a href="/aboutCodroid" target="_blank">About CodroidHub</a>
+      <a href="https://github.com/deepika123-gif" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/deepika-gondia-76120b276/" target="_blank">LinkedIn</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Apna App</h1>
+
+    <div class="table-wrapper">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;gap:12px;flex-wrap:wrap">
+        <div class="header-actions">
+          <!-- <a class="btn" href="/BookScrape_BarChart">Bar Chart</a>
+          <a class="btn" href="/BookScrape_PieChart">Pie Chart</a> -->
+          <a class="btn" href="/scraping">Back</a>
+        </div>
+      </div>
+
+      <div class="table-card">
+        <!-- keep the server-side injected table -->
+        <div>
+          {{ data|safe }}
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>Deepika</footer>
+
+  <script>
+    // optional: add small animation when clicking header buttons
+    document.querySelectorAll('.btn').forEach(btn=>{
+      btn.addEventListener('click',function(e){
+        // allow normal navigation if it's a full link
+        this.style.transform='scale(1.08)';
+        setTimeout(()=>{ this.style.transform=''; },160);
+      });
+    });
+  </script>
+</body>
+</html>

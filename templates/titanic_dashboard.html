@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>COVID-19 Tweets Dashboard</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+
+    *{margin:0;padding:0;box-sizing:border-box;}
+
+    body{
+        font-family:'Inter',sans-serif;
+        background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+        color:#fff;
+        min-height:100vh;
+        text-align:center;
+        padding-bottom:40px;
+    }
+
+    /* TOP HEADING STYLE */
+    h1{
+        font-size:42px;
+        margin-top:40px;
+        margin-bottom:15px;
+        background:linear-gradient(90deg,#7ef1ff,#c87bff);
+        -webkit-background-clip:text;
+        -webkit-text-fill-color:transparent;
+        font-weight:800;
+        text-transform: uppercase;
+        letter-spacing:1px;
+    }
+
+    /* DESCRIPTION */
+    p{
+        max-width:900px;
+        margin:0 auto;
+        font-size:16px;
+        color:#e0e0e0;
+        line-height:1.6;
+        padding:10px 20px;
+    }
+
+    /* IMAGE BOX */
+    .img-box{
+        margin-top:30px;
+        display:flex;
+        justify-content:center;
+    }
+
+    img{
+        width:90%;
+        border-radius:14px;
+        box-shadow:0 15px 40px rgba(126,241,255,0.25),
+                   0 8px 20px rgba(200,123,255,0.18);
+        border:1px solid rgba(255,255,255,0.08);
+    }
+
+    /* BUTTON AREA */
+    .btn-area{
+        margin-top:35px;
+        display:flex;
+        justify-content:center;
+        gap:18px;
+    }
+
+    /* BUTTON STYLING (MATCH POWERBI DASHBOARD THEME) */
+    .btn{
+        text-decoration:none;
+        padding:12px 26px;
+        border-radius:10px;
+        font-weight:700;
+        background:linear-gradient(90deg,#7ef1ff,#c87bff);
+        color:#002;
+        display:inline-flex;
+        align-items:center;
+        gap:10px;
+        border:none;
+        cursor:pointer;
+        transition:transform .18s ease,box-shadow .18s ease;
+        font-size:16px;
+    }
+
+    .btn:hover{
+        transform:scale(1.08);
+        box-shadow:0 0 25px rgba(126,241,255,0.5);
+    }
+
+    .dot{
+        width:10px;
+        height:10px;
+        background:#fff;
+        border-radius:50%;
+        box-shadow:0 2px 6px rgba(0,0,0,0.25);
+    }
+
+</style>
+
+</head>
+<body>
+
+    <h1>Titanic Dataset Dashboard</h1>
+
+    <p>
+The Titanic dataset provides passenger-level data such as age, gender, ticket class, family size, fare, and survival outcomes.
+It is primarily used to analyze patterns and build machine learning models that predict survival probabilities.
+The dataset is a benchmark for classification, feature engineering, and exploratory data analysis.    </p>
+
+    <div class="img-box">
+        <img src="static/titanic.png" alt="COVID19 PowerBI Dashboard">
+    </div>
+
+    <div class="btn-area">
+        <a href="/powerbiDashboards" class="btn"><span class="dot"></span>Back</a>
+        <a href="https://www.kaggle.com/datasets/heptapod/titanic" class="btn" target="_blank"><span class="dot"></span> Go to Dataset</a>
+    </div>
+
+</body>
+</html>

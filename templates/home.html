@@ -1,0 +1,235 @@
+<!-- Updated home.html with professional animations + attractive mouse pointer -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Deepika Gondia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    /* Attractive Custom Cursor */
+    body {
+      cursor: none;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Cursor Circle */
+    .cursor {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: rgba(126,241,255,0.85);
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      transition: transform 0.12s ease;
+      z-index: 9999;
+      mix-blend-mode: screen;
+      box-shadow: 0 0 22px #7ef1ff;
+    }
+
+    /* Smooth fade animations */
+    @keyframes fadeUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 40px;
+      background: rgba(0, 0, 0, 0.35);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+      animation: fadeUp 0.9s ease;
+    }
+
+    header .logo {
+      font-size: 24px;
+      font-weight: 800;
+      color: #7ef1ff;
+    }
+
+    header nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: #d9d9d9;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    header nav a:hover {
+      color: #7ef1ff;
+      letter-spacing: 1px;
+    }
+
+    /* Hero Section */
+    .hero {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 150px 20px 80px;
+      animation: fadeUp 1s ease;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, #7ef1ff, #c87bff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 3px 10px rgba(0,0,0,0.5);
+      animation: glow 3s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #7ef1ff; }
+      to { text-shadow: 0 0 25px #c87bff; }
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 700px;
+      margin-bottom: 30px;
+      color: #ccc;
+      animation: fadeUp 1.3s ease;
+    }
+
+    .hero a.button {
+      background: linear-gradient(90deg, #7ef1ff, #c87bff);
+      padding: 12px 32px;
+      border-radius: 30px;
+      text-decoration: none;
+      color: #002;
+      font-weight: 700;
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: fadeUp 1.5s ease;
+    }
+
+    .hero a.button:hover {
+      transform: scale(1.12);
+      box-shadow: 0 0 25px rgba(126,241,255,0.6);
+    }
+
+    /* Section */
+    section {
+      padding: 80px 40px;
+      text-align: center;
+      animation: fadeUp 1.2s ease;
+    }
+
+    section h2 {
+      font-size: 34px;
+      margin-bottom: 40px;
+      background: linear-gradient(90deg, #7ef1ff, #c87bff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .skills, .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 26px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.04);
+      padding: 25px;
+      border-radius: 16px;
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeUp 1.4s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-12px) scale(1.04);
+      box-shadow: 0 25px 50px rgba(126,241,255,0.3);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0,0,0,0.45);
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 38px; }
+      .hero p { font-size: 16px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="cursor"></div>
+
+  <header>
+    <div class="logo">Deepika Gondia</div>
+    <nav>
+      <a href="/aboutme">About Me</a>
+      <a href="/aboutcodroidhub">About CodroidHub</a>
+      <a href="https://github.com/deepika123-gif" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/deepika-gondia-76120b276/" target="_blank">LinkedIn</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Hi, I'm Deepika</h1>
+    <p>Transforming raw data into actionable insights with robust analysis, creative visualization, and automation skills.</p>
+    <a class="button" href="/explore">View My Work</a>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="card"><h3>Data Analysis</h3><p>Python, Pandas, NumPy, SQL</p></div>
+      <div class="card"><h3>Visualization</h3><p>Power BI, Tableau, Matplotlib</p></div>
+      <div class="card"><h3>Development</h3><p>HTML, CSS, JavaScript</p></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card"><h3>Sales Dashboard</h3><p>Interactive dashboard using Power BI.</p></div>
+      <div class="card"><h3>Web Scraper</h3><p>Python-based web scraping automation.</p></div>
+      <div class="card"><h3>Portfolio Website</h3><p>Responsive site built with HTML, CSS, JS.</p></div>
+    </div>
+  </section>
+
+  <footer>Deepika | Designed with ❤️</footer>
+
+  <script>
+    const cursor = document.querySelector('.cursor');
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.top = e.clientY + 'px';
+      cursor.style.left = e.clientX + 'px';
+    });
+  </script>
+
+</body>
+</html>

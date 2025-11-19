@@ -1,0 +1,206 @@
+<!-- Updated AI & ML Page with Same Theme as Explore More (Neon, Dark Gradient, Glass Cards, Custom Cursor) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI & ML — Brief Introduction (Neon Theme)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+
+    body{
+      cursor:none;
+      font-family:'Inter',sans-serif;
+      background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+      color:#fff;
+      min-height:100vh;
+      padding:120px 20px 120px;
+    }
+
+    /* Neon Cursor */
+    .cursor{
+      position:fixed;top:0;left:0;width:22px;height:22px;border-radius:50%;
+      background:rgba(126,241,255,0.85);pointer-events:none;
+      transform:translate(-50%,-50%);transition:transform .12s ease;
+      z-index:9999;mix-blend-mode:screen;box-shadow:0 0 22px #7ef1ff
+    }
+
+    .container{
+      max-width:1100px;margin:0 auto;
+      background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.02));
+      border-radius:14px;padding:32px 26px;
+      box-shadow:0 10px 30px rgba(2,6,23,0.6);
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    header{display:flex;align-items:center;gap:16px;margin-bottom:20px}
+
+    .logo{
+      width:60px;height:60px;border-radius:12px;
+      background:linear-gradient(135deg,#7ef1ff,#c87bff);
+      display:flex;align-items:center;justify-content:center;
+      font-weight:800;font-size:22px;color:#002;text-shadow:0 1px 4px rgba(0,0,0,0.3);
+      border:1px solid rgba(255,255,255,0.1)
+    }
+
+    h1{
+      font-size:34px;margin:0;
+      background:linear-gradient(90deg,#7ef1ff,#c87bff);
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+    }
+
+    p.lead{color:#d3d3d3;margin-top:4px;font-size:15px}
+
+    h2{
+      font-size:20px;margin-bottom:10px;
+      background:linear-gradient(90deg,#7ef1ff,#c87bff);
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+    }
+
+    section{margin-top:28px}
+
+    .card{
+      background:rgba(255,255,255,0.05);
+      padding:20px;border-radius:12px;
+      border:1px solid rgba(255,255,255,0.08);
+      box-shadow:0 8px 26px rgba(0,0,0,0.45);
+      backdrop-filter:blur(4px);
+    }
+
+    ul{margin-left:20px;color:#d1d1d1;line-height:1.6;font-size:14px}
+
+    .skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+
+    .chip{
+      padding:8px 12px;border-radius:999px;
+      background:rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.1);
+      font-size:13px;color:#cfefff;
+      box-shadow:0 2px 8px rgba(0,0,0,0.25);
+    }
+
+    /* Fixed Bottom Center Button */
+    .main-btn {
+      position: fixed;
+      bottom: 26px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(90deg, #7ef1ff, #c87bff);
+      color: #002;
+      padding: 14px 34px;
+      font-weight: 700;
+      border-radius: 14px;
+      text-decoration: none;
+      box-shadow: 0 6px 20px rgba(6,182,212,0.35);
+      transition: transform .15s, box-shadow .15s;
+      border: 1px solid rgba(255,255,255,0.16);
+      backdrop-filter: blur(4px);
+      z-index: 999;
+    }
+
+    .main-btn:hover {
+      transform: translateX(-50%) scale(1.05);
+      box-shadow: 0 0 25px #7ef1ff;
+    }
+
+    .main-btn:active {
+      transform: translateX(-50%) scale(0.98);
+    }
+
+    @media(max-width:700px){
+      h1{font-size:26px}
+      .logo{width:50px;height:50px}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cursor"></div>
+
+  <div class="container">
+    <header>
+      <div class="logo">AI</div>
+      <div>
+        <h1>Artificial Intelligence & Machine Learning</h1>
+        <p class="lead">A modern, visually appealing overview designed in neon CodroidHub theme.</p>
+      </div>
+    </header>
+
+    <section>
+      <div class="card">
+        <h2>What is Artificial Intelligence (AI)?</h2>
+        <p>AI refers to machines or systems that perform tasks requiring human-like intelligence — understanding, reasoning, learning, and decision-making.</p>
+
+        <h2 style="margin-top:14px">What is Machine Learning (ML)?</h2>
+        <p>ML is a subfield of AI where systems learn patterns from data and improve automatically — without being explicitly programmed.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="card">
+        <h2>Key Differences</h2>
+        <ul>
+          <li><strong>AI</strong> — Broad field of building intelligent systems.</li>
+          <li><strong>ML</strong> — Data-driven algorithms used inside AI.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="card">
+        <h2>Applications</h2>
+        <ul>
+          <li>Healthcare — diagnosis, imaging, drug discovery.</li>
+          <li>Finance — fraud detection, trading, scoring.</li>
+          <li>E-commerce — recommendations, forecasting.</li>
+          <li>Manufacturing — robotics, quality control.</li>
+          <li>NLP — chatbots, text analysis.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="card">
+        <h2>Skills Needed</h2>
+        <div class="skills">
+          <div class="chip">Python</div>
+          <div class="chip">Statistics</div>
+          <div class="chip">SQL</div>
+          <div class="chip">ML Algorithms</div>
+          <div class="chip">Deep Learning</div>
+          <div class="chip">TensorFlow / PyTorch</div>
+          <div class="chip">MLOps</div>
+          <div class="chip">Cloud</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="card">
+        <h2>Future Trends</h2>
+        <ul>
+          <li>LLMs & foundation models</li>
+          <li>Edge AI & real-time inference</li>
+          <li>AI regulation & ethics</li>
+          <li>Interdisciplinary AI roles</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <!-- Bottom-Center Main Button -->
+  <a href="/" class="main-btn"> Project coming soon...</a>
+
+  <!-- Cursor Script -->
+  <script>
+    const cursor=document.querySelector('.cursor');
+    document.addEventListener('mousemove',e=>{
+      cursor.style.top=e.clientY+'px';
+      cursor.style.left=e.clientX+'px';
+    });
+  </script>
+
+</body>
+</html>

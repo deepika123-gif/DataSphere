@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About Me - Deepika Gondia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      cursor: none;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      min-height: 100vh;
+    }
+
+    /* Custom Neon Cursor */
+    .cursor {
+      position: fixed;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: rgba(126,241,255,0.85);
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      transition: transform 0.12s ease;
+      z-index: 9999;
+      mix-blend-mode: screen;
+      box-shadow: 0 0 22px #7ef1ff;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 40px;
+      background: rgba(0,0,0,0.35);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(6px);
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+      color: #7ef1ff;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #d9d9d9;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+
+    nav a:hover { color: #7ef1ff; }
+
+    /* Main */
+    main {
+      padding: 120px 20px 60px;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin-bottom: 26px;
+      background: linear-gradient(90deg, #7ef1ff, #c87bff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 800;
+    }
+
+    /* About Box (PowerBI style card) */
+    .about-box {
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+      padding: 40px 30px;
+      transition: transform .35s ease, box-shadow .35s ease;
+    }
+
+    .about-box:hover {
+      transform: scale(1.03) rotateX(4deg) rotateY(-3deg);
+      box-shadow: 
+        0 25px 60px rgba(126,241,255,0.4),
+        0 10px 25px rgba(200,123,255,0.3);
+    }
+
+    /* Profile Image */
+    .about-box img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 3px solid #7ef1ff;
+      box-shadow: 0 0 18px rgba(126,241,255,0.6);
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      color: #c87bff;
+    }
+
+    p {
+      font-size: 16px;
+      color: #e0e0e0;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    /* Footer */
+    footer {
+      padding: 16px;
+      margin-top: 40px;
+      background: rgba(0,0,0,0.38);
+      text-align: center;
+      color: #ccc;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="cursor"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">Deepika Gondia</div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/aboutme">About Me</a>
+      <a href="/aboutcodroidhub">CodroidHub</a>
+      <a href="https://github.com/deepika123-gif">GitHub</a>
+      <a href="https://www.linkedin.com/in/deepika-gondia-76120b276/">LinkedIn</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>About Me</h1>
+
+    <div class="about-box">
+      <img src="static/pic.jpg" alt="Profile">
+
+      <h2>Hey, I'm Deepika 👋</h2>
+
+      <p>I am passionate about <strong>Data Science, Machine Learning, and Analytics</strong>. My journey involves solving real-world problems using data-driven insights and automation.</p>
+
+      <p>I actively work on <strong>Web Scraping, Power BI Dashboards, Data Visualization, SQL</strong> and building Machine Learning models.</p>
+
+      <p>I love turning raw data into meaningful stories and creating impactful dashboards, tools, and projects.</p>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Data Analytics Trainee | Built with ❤️ by Deepika Gondia
+  </footer>
+
+  <!-- Cursor Script -->
+  <script>
+    const cursor = document.querySelector('.cursor');
+
+    document.addEventListener('mousemove', e => {
+      cursor.style.top = e.clientY + 'px';
+      cursor.style.left = e.clientX + 'px';
+    });
+  </script>
+
+</body>
+</html>

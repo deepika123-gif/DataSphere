@@ -1,0 +1,6 @@
+Flask 
+numpy
+requests
+pandas
+bs4
+matplotlib

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore More - CodroidHub (Updated Cards)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+
+    /* Background + No Default Cursor */
+    body{
+      cursor: none;
+      font-family:'Inter',sans-serif;
+      background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+      color:#fff;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+    }
+
+    /* 🔥 Neon Custom Cursor (Same as Home Page) */
+    .cursor {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: rgba(126,241,255,0.85);
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      transition: transform 0.12s ease;
+      z-index: 9999;
+      mix-blend-mode: screen;
+      box-shadow: 0 0 22px #7ef1ff;
+    }
+
+    header{
+      display:flex;justify-content:space-between;align-items:center;
+      padding:18px 40px;background:rgba(0,0,0,0.35);
+      position:fixed;width:100%;top:0;z-index:10;backdrop-filter:blur(6px)
+    }
+    .logo{font-weight:800;color:#7ef1ff;font-size:20px}
+    nav{display:flex;align-items:center;gap:15px}
+    nav a{
+      color:#d9d9d9;text-decoration:none;font-weight:500;padding:6px 12px;
+      border-radius:6px;transition:background .2s,color .2s;
+    }
+    nav a:hover{color:#7ef1ff;background:rgba(255,255,255,0.08)}
+
+    main{padding:120px 20px 60px;text-align:center;flex:1}
+    h1{font-size:40px;margin-bottom:26px;background:linear-gradient(90deg,#7ef1ff,#c87bff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+
+    .cards-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;max-width:1100px;margin:0 auto}
+    .card-wrap{display:flex;flex-direction:column;align-items:stretch;gap:12px}
+
+    .card{
+      background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.02));
+      border-radius:14px;padding:20px;position:relative;overflow:hidden;
+      border:1px solid rgba(255,255,255,0.08);
+      box-shadow:0 10px 30px rgba(2,6,23,0.6);
+      transition:transform .28s ease,box-shadow .28s ease;
+      display:flex;flex-direction:column;min-height:170px
+    }
+    .card:hover{transform:translateY(-8px);box-shadow:0 30px 60px rgba(2,6,23,0.75)}
+
+    .card-top{
+      display:flex;align-items:center;justify-content:center;padding:12px 16px;border-radius:12px;
+      background:linear-gradient(90deg,#7ef1ff33,#c87bff33);
+      border:1px solid rgba(255,255,255,0.08);
+      font-weight:800;font-size:20px;letter-spacing:1px;
+      color:#fff;margin-bottom:12px;text-transform:uppercase;
+      text-shadow:0 2px 6px rgba(0,0,0,0.35);
+    }
+
+    .card-desc{color:#d1d1d1;font-size:14px;line-height:1.5;padding:6px 4px;text-align:left}
+    .card-divider{height:1px;background:linear-gradient(90deg,transparent,#ffffff10,transparent);margin:12px 0;border-radius:2px}
+
+    .card-cta{display:flex;justify-content:center}
+    .btn{
+      text-decoration:none;padding:10px 22px;border-radius:10px;font-weight:700;
+      background:linear-gradient(90deg,#7ef1ff,#c87bff);color:#002;display:inline-flex;
+      align-items:center;gap:10px;border:none;cursor:pointer;transition:transform .18s ease
+    }
+    .btn:active{transform:translateY(1px)}
+    .btn .dot{width:10px;height:10px;border-radius:50%;background:white}
+
+    @media (max-width:900px){.cards-grid{grid-template-columns:1fr}}
+
+    footer{padding:16px;text-align:center;background:rgba(0,0,0,0.38)}
+  </style>
+</head>
+
+<body>
+
+  <!-- 🔥 Custom Cursor -->
+  <div class="cursor"></div>
+
+  <header>
+    <div class="logo">Deepika Gondia</div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/aboutme">About Me</a>
+      <a href="/aboutcodroidhub" target="_blank">About CodroidHub</a>
+      <a href="https://github.com/deepika123-gif" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/deepika-gondia-76120b276/" target="_blank">LinkedIn</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Explore More</h1>
+
+    <div class="cards-grid">
+
+      <div class="card-wrap">
+        <article class="card">
+          <div class="card-top">Web Scraping</div>
+          <div class="card-desc">Learn how to collect and analyze data from websites using Python, BeautifulSoup and automation tools.</div>
+          <div class="card-divider"></div>
+        </article>
+        <div class="card-cta"><a class="btn" href="/scraping"><span class="dot"></span> Explore Project</a></div>
+      </div>
+
+      <div class="card-wrap">
+        <article class="card">
+          <div class="card-top">Data Science</div>
+          <div class="card-desc">Master data analysis, visualization, and machine learning techniques to solve real-world problems.</div>
+          <div class="card-divider"></div>
+        </article>
+        <div class="card-cta"><a class="btn" href="/data_science"><span class="dot"></span> Explore Project</a></div>
+      </div>
+
+      <div class="card-wrap">
+        <article class="card">
+          <div class="card-top">Power BI</div>
+          <div class="card-desc">Create powerful, interactive dashboards and reports.</div>
+          <div class="card-divider"></div>
+        </article>
+        <div class="card-cta"><a class="btn" href="/powerbiDashboards"><span class="dot"></span> Explore Project</a></div>
+      </div>
+
+      <div class="card-wrap">
+        <article class="card">
+          <div class="card-top">AI / Machine Learning</div>
+          <div class="card-desc">Explore algorithms that enable machines to learn and make decisions — regression to deep learning.</div>
+          <div class="card-divider"></div>
+        </article>
+        <div class="card-cta"><a class="btn" href="/aiml"><span class="dot"></span> Explore Project</a></div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>Deepika | Designed with ❤️</footer>
+
+  <!-- 🔥 Mouse Movement Script -->
+  <script>
+    const cursor = document.querySelector('.cursor');
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.top = e.clientY + 'px';
+      cursor.style.left = e.clientX + 'px';
+    });
+  </script>
+
+</body>
+</html>

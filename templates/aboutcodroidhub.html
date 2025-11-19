@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About CodroidHub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <style>
+    :root {
+      --primary-cyan: #7ef1ff;
+      --secondary-purple: #c87bff;
+      --text-light: #d9d9d9;
+      --text-muted: #aaa;
+      --border: rgba(255,255,255,0.08);
+      --card-bg: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 40px;
+      background: rgba(0, 0, 0, 0.35);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+    }
+    header .logo {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--primary-cyan);
+      letter-spacing: 1px;
+    }
+    header nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: var(--text-light);
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    header nav a:hover {
+      color: var(--primary-cyan);
+    }
+    header nav a.active {
+      color: var(--primary-cyan);
+      border-bottom: 2px solid var(--primary-cyan);
+      padding-bottom: 2px;
+    }
+
+    main {
+      flex: 1;
+      max-width: 1200px;
+      margin: 100px auto 60px;
+      padding: 30px;
+      display: flex;
+      gap: 2.5rem;
+      align-items: flex-start;
+    }
+
+    /* Left 50% */
+    .left-box {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .left-box img {
+      width: 100%;
+      max-width: 500px;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 2px solid var(--primary-cyan);
+      box-shadow: 0 0 25px rgba(126,241,255,0.3);
+      transition: transform 0.4s ease;
+    }
+    .left-box img:hover { transform: scale(1.03); }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+      justify-content: center;
+    }
+    .social-links a img {
+      height: 32px;
+      filter: invert(1);
+      transition: transform 0.3s;
+    }
+    .social-links a:hover img { transform: scale(1.2); }
+
+    /* Right 50% */
+    .right-content {
+      flex: 1;
+    }
+    .right-content h1, .right-content h2 {
+      background: linear-gradient(90deg, var(--primary-cyan), var(--secondary-purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 3px 10px rgba(0,0,0,0.5);
+      margin-bottom: 1.5rem;
+    }
+    .right-content h1 { font-size: 3rem; }
+    .right-content h2 { font-size: 2rem; }
+    .right-content p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      color: #ccc;
+    }
+    .right-content ul {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 2rem;
+    }
+    .right-content ul li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #ccc;
+    }
+    .right-content ul li i { color: var(--primary-cyan); margin-top: 5px; }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0,0,0,0.45);
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    /* Responsive */
+    @media(max-width: 900px) {
+      main { flex-direction: column; }
+      .left-box, .right-content { flex: 1 1 100%; }
+      .right-content h1 { font-size: 2.5rem; }
+      .right-content h2 { font-size: 1.75rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">CodroidHub</div>
+    <nav>
+      <a href="/">About Me</a>
+      <a href="/aboutcodroidhub" class="active">About CodroidHub</a>
+      <a href="https://github.com/Devashish19" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/company/codroidhub/posts/?feedView=all" target="_blank">LinkedIn</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="left-box">
+      <img src="static/certificate.png" alt="Certificate">
+      <div class="social-links">
+        <a href="https://codroidhub.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="Website"></a>
+        <a href="https://github.com/CodroidHub" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub"></a>
+        <a href="https://www.linkedin.com/company/codroidhub" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn"></a>
+      </div>
+    </div>
+
+    <div class="right-content">
+      <h1>About CodroidHub</h1>
+      <p>
+        CodroidHub Private Limited is a fast-growing EdTech and IT solutions company with a strong presence in India and Nepal, dedicated to transforming education and technology through innovation, collaboration, and industry partnerships.
+      </p>
+
+      <h2>Mission</h2>
+      <p>
+        To empower learners, educators, and organizations by providing accessible, industry-relevant, and technology-driven education solutions, fostering innovation and creating a skilled workforce prepared for the challenges of the digital era.
+      </p>
+
+      <h2>Vision</h2>
+      <p>
+        To become a global leader in EdTech and IT innovation, bridging the gap between education and industry by building a sustainable ecosystem of learning, technology, and entrepreneurship that impacts lives across borders.
+      </p>
+
+      <h2>The company specializes in:</h2>
+      <ul>
+        <li><i class="fas fa-check-circle"></i>EdTech Solutions: K-12 STEM & coding curriculum, industry-aligned skilling programs, and AI/ML upskilling initiatives.</li>
+        <li><i class="fas fa-check-circle"></i>IT Services: Web & mobile application development, game design, and AI/ML-driven enterprise solutions.</li>
+        <li><i class="fas fa-check-circle"></i>Training & Skilling Programs: Bootcamps, summer industrial training, workshops, and hybrid learning models with hands-on projects.</li>
+        <li><i class="fas fa-check-circle"></i>Industry Integration: LMS-driven learning journeys, global certifications, and project-based internships.</li>
+      </ul>
+
+      <h2>Key Takeaways</h2>
+      <ul>
+        <li><i class="fas fa-check-circle"></i>15+ collaborations with leading colleges and schools for curriculum integration, research support, and skilling programs.</li>
+        <li><i class="fas fa-check-circle"></i>5+ global IT industry partnerships driving innovation in AI, data analytics, and product development.</li>
+        <li><i class="fas fa-check-circle"></i>Expertise in Generative AI, Cloud Computing, Big Data, AR/VR, and Cybersecurity.</li>
+        <li><i class="fas fa-check-circle"></i>Flagship initiatives like Skill Yatra, AI for Your Work, and Coding for Schools.</li>
+        <li><i class="fas fa-check-circle"></i>Growing footprint across India and Nepal with educators, mentors, and industry experts.</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 CodroidHub | Built with ❤️ by Deepika
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Data Science — Introduction</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <style>
+    :root {
+      --primary-cyan: #7ef1ff;
+      --secondary-purple: #c87bff;
+      --text-light: #d9d9d9;
+      --text-muted: #aaa;
+      --border: rgba(255,255,255,0.08);
+      --card-bg: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 40px;
+      background: rgba(0, 0, 0, 0.35);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+    }
+    header .logo {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--primary-cyan);
+      letter-spacing: 1px;
+    }
+
+    main {
+      flex: 1;
+      max-width: 1200px;
+      margin: 100px auto 60px;
+      padding: 30px;
+      display: flex;
+      gap: 2.5rem;
+    }
+
+    .content-box {
+      flex: 1;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(126,241,255,0.15);
+    }
+
+    h1, h2 {
+      background: linear-gradient(90deg, var(--primary-cyan), var(--secondary-purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 3px 10px rgba(0,0,0,0.5);
+      margin-bottom: 1.4rem;
+    }
+    h1 { font-size: 2.6rem; }
+    h2 { font-size: 1.8rem; }
+
+    p, li {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #ccc;
+    }
+
+    ul { padding-left: 18px; margin-bottom: 20px; }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0,0,0,0.45);
+      font-size: 14px;
+      color: #aaa;
+      margin-top: 20px;
+    }
+
+    .btn {
+      background: linear-gradient(90deg, var(--primary-cyan), var(--secondary-purple));
+      padding: 12px 24px;
+      border-radius: 30px;
+      display: inline-block;
+      color: #032025;
+      font-weight: 800;
+      text-decoration: none;
+      margin-top: 20px;
+      transition: 0.3s;
+    }
+    .btn:hover { transform: scale(1.05); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Data Science</div>
+  </header>
+
+  <main>
+    <div class="content-box">
+      <h1>Data Science — Introduction</h1>
+      <p>Data Science is a multidisciplinary field that uses algorithms, statistics, and tools to extract meaningful insights from data. It helps businesses and industries make informed, data-driven decisions.</p>
+
+      <h2>What is Data Science?</h2>
+      <p>Data Science combines data collection, cleaning, analysis, visualization, machine learning, and model deployment to solve real-world problems.</p>
+
+      <h2>Scope of Data Science</h2>
+      <ul>
+        <li>Data Engineering & Big Data Processing</li>
+        <li>Machine Learning & Deep Learning</li>
+        <li>Statistical Modeling & Forecasting</li>
+        <li>AI-powered Automation & Insights</li>
+        <li>Data Visualization & Storytelling</li>
+        <li>Industry Applications: Healthcare, Finance, Retail, IoT & more</li>
+      </ul>
+
+      <h2>Skills Required</h2>
+      <ul>
+        <li>Python, SQL, Pandas, NumPy</li>
+        <li>Machine Learning Libraries (sklearn, TensorFlow, PyTorch)</li>
+        <li>Data Visualization (Matplotlib, PowerBI, Tableau)</li>
+        <li>Cloud Platforms: AWS, GCP, Azure</li>
+      </ul>
+
+      <h2>Future Scope</h2>
+      <ul>
+        <li>High-demand career opportunities globally</li>
+        <li>Expanding fields like AI, automation & robotics</li>
+        <li>Growing need for data-driven decision-making</li>
+      </ul>
+
+      <center>
+        <a class="btn" href="/">Project coming soon...</a>
+      </center>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Data Science Project
+  </footer>
+</body>
+</html>
